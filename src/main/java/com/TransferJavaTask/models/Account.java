@@ -3,14 +3,16 @@ package com.TransferJavaTask.models;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 @Entity
+@Table(name = "accounts")
 public class Account {
 
     @Id
-    private int account_id;
+    private int account_id=1;
     private int user_id;
     private String account_number;
     private String account_name;

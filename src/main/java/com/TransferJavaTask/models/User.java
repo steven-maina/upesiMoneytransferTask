@@ -16,7 +16,7 @@ public class User {
 //   @GeneratedValue(strategy= GenerationType.SEQUENCE, generator="USERS_SEQ")
 //    @Column(name="user_id")
 
-    private int user_id =1;
+    private int user_id;
     @NotEmpty(message = "The First name field cannot be empty")
     @Size(min=3, message = "The First name field must greater than 3 characters")
     private String first_name;

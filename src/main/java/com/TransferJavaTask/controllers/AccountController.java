@@ -32,8 +32,9 @@ public class AccountController {
         User user = (User)session.getAttribute("user");
         int setAccountNumber = GenAccountNumber.generateAccountNumber();
         String bankAccountNumber = Integer.toString(setAccountNumber);
-        // TODO: CREATE ACCOUNT:
-        accountRepository.createBankAccount(user.getUser_id(), bankAccountNumber, accountName, accountType );
+
+//        System.out.println("Create account details: " + user.getUser_id()+" " +bankAccountNumber+" "+ accountName+" "+accountType);
+        accountRepository.createBankAccount(8, bankAccountNumber, accountName, accountType);
         System.out.println("............................. ");
         // Set Success message:
         redirectAttributes.addFlashAttribute("success", "Account Created Successfully!");
